@@ -20,13 +20,17 @@
     .wrapper{max-width:1400px;margin:0 auto}
     .hero-image-container{
       height:85vh;min-height:700px;position:relative;overflow:hidden;
-      background:linear-gradient(135deg,#000814 0%,#001220 50%,#000814 100%);
+      background:url('https://viniciusxtrad.github.io/uber-profissional/deade122.jpg') center/cover no-repeat;
+      display:flex;align-items:center;justify-content:center;
     }
-    .hero-content{position:relative;z-index:3;text-align:center;padding:120px 20px 80px}
+    .hero-image-container::before{
+      content:'';position:absolute;inset:0;background:rgba(0,0,0,.65);
+    }
+    .hero-content{position:relative;z-index:3;text-align:center;padding:0 20px;max-width:900px}
     .premium-badge{
       display:inline-block;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);
       border:1px solid rgba(0,200,255,.3);color:#00c8ff;padding:12px 24px;border-radius:50px;
-      font-weight:700;font-size:.75em;text-transform:uppercase;letter-spacing:2px;margin-bottom:30px;
+      font-weight:700;font-size:.75em;text-transform:uppercase;letter-spacing:2px;margin-bottom:25px;
     }
     .hero-title{
       font-size:5em;font-weight:900;line-height:1.1;margin-bottom:20px;
@@ -35,7 +39,7 @@
       animation:lightSweep 6s linear infinite;
     }
     @keyframes lightSweep{0%{background-position:-100% 0}100%{background-position:200% 0}}
-    .hero-subtitle{font-size:1.4em;color:rgba(255,255,255,.8);max-width:700px;margin:0 auto 40px}
+    .hero-subtitle{font-size:1.4em;color:rgba(255,255,255,.8);margin-bottom:35px}
     .cta-button{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       background:linear-gradient(135deg,#ff6400 0%,#ff8c00 100%);color:#000;
@@ -61,7 +65,7 @@
     }
     .destino-card,.diferencial-card,.tipo-card{
       background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);
-      padding:25px 15px;border-radius:12px;transition:all .3s ease
+      padding:25px 15px;border-radius:12px;transition:all .3s ease;
     }
     .destino-icon,.diferencial-icon,.tipo-icon{font-size:2.2em;margin-bottom:10px}
     .whatsapp-float{
@@ -160,7 +164,7 @@
     <div class="footer-tagline">Transporte Executivo com Padrão de Excelência</div>
     <p style="color:rgba(255,255,255,.5);font-size:.75em;margin-top:15px">
       © 2025 – Valdecir Grandi | Motorista Profissional<br/>
-      🚗 Segurança • Conforto • Pontualidade • Discreção
+      🚗 Segurança • Conforto • Pontualidade • Discrição
     </p>
   </footer>
 </body>
