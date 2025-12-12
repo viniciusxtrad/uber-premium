@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UBER PREMIUM | Transporte Executivo com Excelência</title>
 
-  <meta name="description" content="Serviço premium de transporte com motorista profissional em Terra Boa, Cianorte, Maringá, Curitiba, Foz do Iguaçu, Paraguai, São Paulo e região. Experiência de luxo e conforto." />
+  <meta name="description" content="Serviço premium de transporte com motorista profissional para Cianorte, Campo Mourão, Maringá, Curitiba e região. Experiência de luxo e conforto." />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="UBER PREMIUM | Transporte Executivo com Excelência" />
   <meta property="og:description" content="Experimente o transporte premium com padrão Uber. Motorista particular, carros luxuosos e serviço discreto para executivos e clientes exigentes." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:image" content="https://viniciusxtrad.github.io/uber-premium/ubergo2.jpg" />
 
   <style>
     * {
@@ -193,6 +193,33 @@
     .hero-subtitle strong {
       color: #00c8ff;
       font-weight: 600;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      color: #00c8ff;
+      transform: translateY(-2px);
+    }
+
+    .contact-icon {
+      font-size: 1.3em;
     }
 
     /* CTA BUTTON */
@@ -633,6 +660,28 @@
       margin: 10px 0;
     }
 
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.9em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      color: #00c8ff;
+      transform: translateY(-2px);
+    }
+
     /* RESPONSIVO */
     @media (max-width: 1024px) {
       .hero-title {
@@ -685,6 +734,12 @@
         bottom: 20px;
         right: 20px;
       }
+
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -704,6 +759,10 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .section-title {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
@@ -717,12 +776,23 @@
         <div class="premium-badge">🚗 Serviço Premium</div>
         <h1 class="hero-title">UBER PREMIUM</h1>
         <p class="hero-subtitle">
-          Serviço executivo de transporte premium no Paraná e além: <strong>Terra Boa, Cianorte, Campo Mourão, Maringá, Engenheiro Beltrão, Curitiba, Foz do Iguaçu, Paraguai, São Paulo</strong> e região. Experiência de luxo com motorista profissional.
+          Serviço executivo de transporte premium para <strong>Cianorte, Campo Mourão, Maringá, Curitiba e região</strong> e região. Experiência de luxo com motorista profissional e atendimento personalizado.
         </p>
-        <a href="https://wa.me/5544984224659?text=Olá!%20Gostaria%20de%20solicitar%20um%20serviço%20UBER%20PREMIUM%20e%20saber%20mais." class="cta-button">
+        <a href="https://wa.me/5544991177433?text=Olá!%20Gostaria%20de%20solicitar%20um%20serviço%20UBER%20PREMIUM%20e%20saber%20mais." class="cta-button">
           <span class="whatsapp-icon">💬</span>
           Solicitar Agora no WhatsApp
         </a>
+        
+        <div class="contact-info">
+          <a href="https://wa.me/5544991177433" class="contact-item">
+            <span class="contact-icon">📱</span>
+            
+          </a>
+          <a href="https://instagram.com/valdecir.grandi" target="_blank" class="contact-item">
+            <span class="contact-icon">📸</span>
+            <span>@valdecir.grandi</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -738,10 +808,6 @@
       <div class="destinos-grid">
         <div class="destino-card">
           <div class="destino-icon">📍</div>
-          <div class="destino-name">Terra Boa</div>
-        </div>
-        <div class="destino-card">
-          <div class="destino-icon">📍</div>
           <div class="destino-name">Cianorte</div>
         </div>
         <div class="destino-card">
@@ -753,28 +819,24 @@
           <div class="destino-name">Maringá</div>
         </div>
         <div class="destino-card">
-          <div class="destino-icon">📍</div>
-          <div class="destino-name">Engenheiro Beltrão</div>
-        </div>
-        <div class="destino-card">
           <div class="destino-icon">🏙️</div>
           <div class="destino-name">Curitiba</div>
         </div>
         <div class="destino-card">
-          <div class="destino-icon">🌊</div>
-          <div class="destino-name">Foz do Iguaçu</div>
+          <div class="destino-icon">🏢</div>
+          <div class="destino-name">Região Metropolitana</div>
         </div>
         <div class="destino-card">
-          <div class="destino-icon">🛍️</div>
-          <div class="destino-name">Paraguai</div>
+          <div class="destino-icon">✈️</div>
+          <div class="destino-name">Aeroportos</div>
         </div>
         <div class="destino-card">
-          <div class="destino-icon">🌆</div>
-          <div class="destino-name">São Paulo</div>
+          <div class="destino-icon">🏥</div>
+          <div class="destino-name">Hospitais e Clínicas</div>
         </div>
         <div class="destino-card">
-          <div class="destino-icon">🗺️</div>
-          <div class="destino-name">Região Completa</div>
+          <div class="destino-icon">💼</div>
+          <div class="destino-name">Centros Empresariais</div>
         </div>
       </div>
     </section>
@@ -836,7 +898,7 @@
         <div class="tipo-card">
           <div class="tipo-icon">✈️</div>
           <h3 class="tipo-title">Aeroportos</h3>
-          <p class="tipo-text">Maringá, Curitiba, São Paulo</p>
+          <p class="tipo-text">Afonso Pena</p>
         </div>
 
         <div class="tipo-card">
@@ -852,15 +914,15 @@
         </div>
 
         <div class="tipo-card">
-          <div class="tipo-icon">🌊</div>
-          <h3 class="tipo-title">Turismo Premium</h3>
-          <p class="tipo-text">Foz do Iguaçu, Paraguai e mais</p>
+          <div class="tipo-icon">🎉</div>
+          <h3 class="tipo-title">Eventos Especiais</h3>
+          <p class="tipo-text">Casamentos, festas e celebrações</p>
         </div>
 
         <div class="tipo-card">
-          <div class="tipo-icon">👗</div>
-          <h3 class="tipo-title">Eventos & Lazer</h3>
-          <p class="tipo-text">Casamentos, festas, compras e mais</p>
+          <div class="tipo-icon">🛍️</div>
+          <h3 class="tipo-title">Compras e Lazer</h3>
+          <p class="tipo-text">Passeios e compras com conforto</p>
         </div>
       </div>
     </section>
@@ -888,10 +950,21 @@
         <p>
           Experimente o padrão Uber Premium com motorista particular. Serviço personalizado para cada ocasião.
         </p>
-        <a href="https://wa.me/5544999226060?text=Olá!%20Quero%20agendar%20uma%20viagem%20com%20UBER%20PREMIUM.%20Meu%20destino%20é:" class="cta-button">
+        <a href="https://wa.me/5544991177433?text=Olá!%20Quero%20agendar%20uma%20viagem%20com%20UBER%20PREMIUM.%20Meu%20destino%20é:" class="cta-button">
           <span class="whatsapp-icon">💬</span>
           Falar Agora no WhatsApp
         </a>
+        
+        <div class="contact-info" style="margin-top: 40px;">
+          <a href="tel:+5544991177433" class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span>(44) 99117-7433</span>
+          </a>
+          <a href="https://instagram.com/valdecir.grandi" target="_blank" class="contact-item">
+            <span class="contact-icon">📸</span>
+            <span>@valdecir.grandi</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -902,28 +975,33 @@
         <div class="footer-tagline">Transporte Executivo com Padrão de Excelência</div>
         
         <div class="footer-locations">
-          <span class="location-tag">Terra Boa</span>
           <span class="location-tag">Cianorte</span>
           <span class="location-tag">Campo Mourão</span>
           <span class="location-tag">Maringá</span>
-          <span class="location-tag">Engenheiro Beltrão</span>
           <span class="location-tag">Curitiba</span>
-          <span class="location-tag">Foz do Iguaçu</span>
-          <span class="location-tag">Paraguai</span>
-          <span class="location-tag">São Paulo</span>
+          <span class="location-tag">Região Metropolitana</span>
+        </div>
+
+        <div class="social-links">
+          <a href="https://wa.me/5544991177433" class="social-link">
+        
+          </a>
+          <a href="https://instagram.com/valdecir.grandi" target="_blank" class="social-link">
+            <span>Instagram: @valdecir.grandi</span>
+          </a>
         </div>
 
         <div class="footer-bottom">
           <p class="footer-text">🚗 Segurança • Conforto • Pontualidade • Discreção</p>
           <p class="footer-text">© 2025 UBER PREMIUM – Serviço independente com padrão Uber</p>
-          <p class="footer-text">Entre em contato: (44) 98422-4659 | (44) 99922-6060</p>
+          <p class="footer-text">Valdecir Grandi | Motorista Particular Profissional</p>
         </div>
       </div>
     </footer>
   </div>
 
   <!-- WHATSAPP FLOAT -->
-  <a href="https://wa.me/5544999226060?text=Olá!%20Gostaria%20de%20solicitar%20um%20serviço%20UBER%20PREMIUM%20e%20saber%20mais." class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/5544991177433?text=Olá!%20Gostaria%20de%20solicitar%20um%20serviço%20UBER%20PREMIUM%20e%20saber%20mais." class="whatsapp-float" target="_blank">
     💬
   </a>
 </body>
