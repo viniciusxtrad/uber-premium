@@ -50,11 +50,6 @@
       }
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
-
     body {
       font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
       background: #0a0a0a;
@@ -200,10 +195,44 @@
       font-weight: 600;
     }
 
-    /* CTA BUTTON */
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 12px 25px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50px;
+      border: 1px solid rgba(0, 200, 255, 0.2);
+    }
+
+    .contact-item:hover {
+      color: #00c8ff;
+      transform: translateY(-2px);
+      background: rgba(0, 200, 255, 0.1);
+      border-color: rgba(0, 200, 255, 0.4);
+    }
+
+    .contact-icon {
+      font-size: 1.3em;
+    }
+
+    /* CTA BUTTON - CORRIGIDO */
     .cta-button {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 15px;
       background: linear-gradient(135deg, #ff6400 0%, #ff8c00 100%);
       color: #000;
@@ -220,11 +249,9 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       box-shadow: 0 10px 40px rgba(255, 100, 0, 0.3);
-    }
-
-    .cta-button--compact {
-      padding: 16px 32px;
-      font-size: 1.1em;
+      margin: 0 auto;
+      max-width: 400px;
+      width: auto;
     }
 
     .cta-button::before {
@@ -255,31 +282,9 @@
       animation: pulse 2s infinite;
     }
 
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1.1em;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .contact-item:hover {
-      color: #00c8ff;
-      transform: translateY(-2px);
-    }
-
-    .contact-icon {
-      font-size: 1.3em;
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
     }
 
     /* SECTIONS */
@@ -504,7 +509,7 @@
       font-weight: 600;
     }
 
-    /* CTA FINAL */
+    /* CTA FINAL - BOTÃO CORRIGIDO */
     .cta-final {
       background: linear-gradient(135deg, 
         rgba(0, 20, 40, 0.9) 0%,
@@ -568,6 +573,14 @@
       color: rgba(255, 255, 255, 0.8);
       margin-bottom: 50px;
       line-height: 1.7;
+    }
+
+    /* BOTÃO NO CTA FINAL ESPECÍFICO */
+    .cta-final .cta-button {
+      width: auto;
+      min-width: 300px;
+      max-width: 400px;
+      margin: 0 auto;
     }
 
     /* WHATSAPP FLOAT */
@@ -680,11 +693,17 @@
       align-items: center;
       gap: 8px;
       transition: all 0.3s ease;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50px;
+      border: 1px solid rgba(0, 200, 255, 0.1);
     }
 
     .social-link:hover {
       color: #00c8ff;
       transform: translateY(-2px);
+      background: rgba(0, 200, 255, 0.1);
+      border-color: rgba(0, 200, 255, 0.3);
     }
 
     /* RESPONSIVO */
@@ -716,12 +735,11 @@
         font-size: 2.5em;
       }
 
-      .cta-button,
-      .cta-button--compact {
-        width: 100%;
-        justify-content: center;
-        padding: 18px 24px;
+      .cta-button {
+        padding: 18px 30px;
         font-size: 1.1em;
+        width: 90%;
+        max-width: 350px;
       }
 
       .destinos-grid,
@@ -748,6 +766,11 @@
         align-items: center;
         gap: 15px;
       }
+      
+      .cta-final .cta-button {
+        width: 90%;
+        min-width: unset;
+      }
     }
 
     @media (max-width: 480px) {
@@ -771,6 +794,16 @@
       .section-title {
         font-size: 2em;
       }
+
+      .cta-button {
+        padding: 16px 25px;
+        font-size: 1em;
+      }
+      
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -786,16 +819,12 @@
         <p class="hero-subtitle">
           Serviço executivo de transporte premium para <strong>Cianorte, Campo Mourão, Maringá, Curitiba e região.</strong> Experiência de luxo com motorista profissional e atendimento personalizado.
         </p>
-        <a href="https://wa.me/5544991177433?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20servi%C3%A7o%20UBER%20PREMIUM%20e%20saber%20mais." class="cta-button">
+        <a href="https://wa.me/5544991177433?text=Olá!%20Gostaria%20de%20solicitar%20um%20serviço%20UBER%20PREMIUM%20e%20saber%20mais." class="cta-button">
           <span class="whatsapp-icon">💬</span>
           Solicitar Agora no WhatsApp
         </a>
         
         <div class="contact-info">
-          <a href="https://wa.me/5544991177433" class="contact-item">
-            <span class="contact-icon">📱</span>
-            <span>(44) 99117-7433</span>
-          </a>
           <a href="https://instagram.com/valdecir.grandi" target="_blank" class="contact-item">
             <span class="contact-icon">📸</span>
             <span>@valdecir.grandi</span>
@@ -958,16 +987,12 @@
         <p>
           Experimente o padrão Uber Premium com motorista particular. Serviço personalizado para cada ocasião.
         </p>
-        <a href="https://wa.me/5544991177433?text=Ol%C3%A1%21%20Quero%20agendar%20uma%20viagem%20com%20UBER%20PREMIUM.%20Meu%20destino%20%C3%A9%3A" class="cta-button cta-button--compact">
+        <a href="https://wa.me/5544991177433?text=Olá!%20Quero%20agendar%20uma%20viagem%20com%20UBER%20PREMIUM.%20Meu%20destino%20é:" class="cta-button">
           <span class="whatsapp-icon">💬</span>
           Falar Agora no WhatsApp
         </a>
         
         <div class="contact-info" style="margin-top: 40px;">
-          <a href="tel:+5544991177433" class="contact-item">
-            <span class="contact-icon">📞</span>
-            <span>(44) 99117-7433</span>
-          </a>
           <a href="https://instagram.com/valdecir.grandi" target="_blank" class="contact-item">
             <span class="contact-icon">📸</span>
             <span>@valdecir.grandi</span>
@@ -991,9 +1016,6 @@
         </div>
 
         <div class="social-links">
-          <a href="https://wa.me/5544991177433" class="social-link">
-            <span>WhatsApp: (44) 99117-7433</span>
-          </a>
           <a href="https://instagram.com/valdecir.grandi" target="_blank" class="social-link">
             <span>Instagram: @valdecir.grandi</span>
           </a>
@@ -1009,9 +1031,8 @@
   </div>
 
   <!-- WHATSAPP FLOAT -->
-  <a href="https://wa.me/5544991177433?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20servi%C3%A7o%20UBER%20PREMIUM%20e%20saber%20mais." class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/5544991177433?text=Olá!%20Gostaria%20de%20solicitar%20um%20serviço%20UBER%20PREMIUM%20e%20saber%20mais." class="whatsapp-float" target="_blank">
     💬
   </a>
 </body>
 </html>
-
